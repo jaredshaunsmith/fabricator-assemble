@@ -53,7 +53,7 @@ var defaults = {
 	 * CSS - snippets turned into partials
 	 * @type {(String|Array)}
 	 */
-	css: ['src/assets/toolkit/styles/components/*'],
+	css: ['src/assets/toolkit/styles/**/*'],
 
 	/**
 	 * JS - snippets turned into partials

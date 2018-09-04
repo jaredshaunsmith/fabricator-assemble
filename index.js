@@ -358,6 +358,7 @@ var parseMaterials = function () {
 		if (!isSubCollection) {
 			assembly.materials[collection].items[key] = {
 				name: toTitleCase(id),
+				class: (fileMatter.data.class) ? fileMatter.data.class : '',
 				notes: (fileMatter.data.notes) ? md.render(fileMatter.data.notes) : '',
 				data: localData,
 				css: (assembly.css['_' + id]) ? assembly.css['_' + id].content : '',
@@ -367,6 +368,7 @@ var parseMaterials = function () {
 		} else {
 			assembly.materials[parent].items[collection].items[key] = {
 				name: toTitleCase(id.split('.')[1]),
+				class: (fileMatter.data.class) ? fileMatter.data.class : '',
 				notes: (fileMatter.data.notes) ? md.render(fileMatter.data.notes) : '',
 				data: localData,
 				css: (assembly.css['_' + id]) ? assembly.css['_' + id].content : '',
